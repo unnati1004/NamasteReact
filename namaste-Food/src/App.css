@@ -1,0 +1,39 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  border:"2px solid green";
+}
+.logo{
+  width: 100px;
+}
+
+.nav-items>ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items > ul > li{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.res-card {
+  border: 2px solid green;
+  width: 200px;
+  background-color: grey;
+}
+
+.res-logo{
+  width:200px;
+  height: 200px;
+}
+
+.image{
+  width:200px;
+  height: 190px;
+}
+
+
+
