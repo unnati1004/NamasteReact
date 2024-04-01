@@ -10,7 +10,17 @@ export const Body = ()=>{
                     </h4>
                 </div>     
                 <div className="res-container">
-                  
+
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
+                   <ResturantCard/>
                    <ResturantCard/>
                 </div>
              </div>

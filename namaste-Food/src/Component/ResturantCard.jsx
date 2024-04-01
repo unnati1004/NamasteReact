@@ -7,10 +7,12 @@ export const ResturantCard =()=>{
              <div className="res-logo">
                <img src={butterChicken} alt="res-logo" className="image"/>       
              </div>
-             <h3> Meghna foods </h3>
-             <h4>Biryani </h4>
-             <h4>4.4 star</h4>  
-             <h4>30 minutes</h4>  
+             <div className="res-body">
+              <h3> Meghna foods </h3>
+              <h4>Biryani </h4>
+              <h4>4.4 star</h4>  
+              <h4>30 minutes</h4>  
+             </div>
           </div>
       </>
    )       
