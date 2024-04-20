@@ -20,10 +20,11 @@
 }
 
 .res-card {
-  /* border: 2px solid green; */
-  width: 200px;
-  padding: 10px;
-  margin:10px;
+  /* border: 2px solid red; */
+  width: 250px;
+  padding: 15px;
+  margin:2px;
+  background-color: #F6F3E6;
   cursor: pointer;
 }
 .res-card:hover{
@@ -36,12 +37,18 @@
 }
 
 .image{
-  width:200px;
+  /* border: 5px solid blue; */
+  width:250px;
   height: 190px;
 }
 
 .res-container{
+  /* border:2px solid green; */
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
+  justify-content:"center";
+  align-items:"center";
+  margin: 0;
+  /* padding: 20px; */
+  /* margin: 1px; */
 }
