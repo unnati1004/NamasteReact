@@ -7,16 +7,16 @@ export const Body = ()=>{
   const [listOfResturant,setListOfResturant] = useState(resList);
 
   useEffect(()=>{
-    console.log("useEffect called");
     fetchData();
   },[])
 
   const fetchData=async ()=>{
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.287084&lng=83.113483&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const  json = await data.json();
-    console.log("json",json);
+    console.log("json",json.data.cards[0].card.card.imageGridCards.info);
+
     // Optional chaining 
-    // setListOfResturant()
+    setListOfResturant(json.data.cards[0].card.card.imageGridCards.info)
   }
 
   if(listOfResturant.length == 0){
@@ -43,8 +43,8 @@ export const Body = ()=>{
                 <div className="res-container">
                   {listOfResturant.map((resObj)=>
                    <ResturantCard
-                    key ={resObj.info.id} 
-                    resData = {resObj}
+                    key ={resObj.id} 
+                    resData = {listOfResturant}
                    />
                   )}
                    
