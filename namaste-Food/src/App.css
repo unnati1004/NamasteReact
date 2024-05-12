@@ -56,13 +56,16 @@
 .shimmer-container{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 90px;
 }
 
-.shimmer-card{
-  margin: 20px;
-  width: 200px;
-  height: 400px;
-  background-color: grey ;
+.shimmer-card{ 
+  width: 250px;
+  height: 400px ;
+  padding: 15px;
+  margin:2px;
+  background-color: #d2d1d1;
+  cursor: pointer;
 }
 
 

@@ -1,6 +1,11 @@
+import { useState } from "react";
 import logo from "../Image/foodlogo.jpeg";
 
 export const Header = ()=> {
+
+     const [buttonReact,setButtonReact] = useState("Login")
+
+     console.log("rendered");
           return (
           <>
               <div className="header">
@@ -16,6 +21,11 @@ export const Header = ()=> {
                               <li>About Us</li>
                               <li>Contact Us</li>
                               <li>Cart</li>
+                              <button
+                               onClick={()=>{
+                                   setButtonReact("Logout")
+                               }}
+                              >{buttonReact}</button>
                          </ul>
                     </div>
               </div>           

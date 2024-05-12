@@ -4,12 +4,11 @@ import CDN_URL from "../utils/constant";
 export const ResturantCard =(props)=>{
    const {resData} = props;
 
-   console.log("resData",resData);
+   // console.log("resData",resData);
 
    const {cloudinaryImageId,sla,costForTwo,avgRating,cuisines,name} = resData?.info;
    
    return(
-       
           <div className="res-card">
              <div className="res-logo">
                <img src={CDN_URL + cloudinaryImageId} alt="res-logo" className="image"/>       
@@ -23,5 +22,5 @@ export const ResturantCard =(props)=>{
              </div>
           </div>
       
-   )       
+          )       
 }
