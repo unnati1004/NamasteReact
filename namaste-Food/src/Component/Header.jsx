@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../Image/foodlogo.jpeg";
-
+import { Link } from "react-router-dom";
 export const Header = ()=> {
 
      const [buttonReact,setButtonReact] = useState("Login")
@@ -18,8 +18,12 @@ export const Header = ()=> {
                     <div className="nav-items">
                          <ul>
                               <li>Home</li>
-                              <li>About Us</li>
-                              <li>Contact Us</li>
+                              <li>
+                                 <Link to="/about" >About Us</Link>  
+                              </li>
+                              <li>
+                                <Link to="/contact">Contact Us</Link>   
+                              </li>
                               <li>Cart</li>
                               <button
                                onClick={()=>{
