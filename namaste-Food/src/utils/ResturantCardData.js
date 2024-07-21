@@ -1,4 +1,4 @@
-const resCard = [
+export const resCard = [
   {
     statusCode: 0,
     data: {
