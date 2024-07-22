@@ -9,7 +9,7 @@ class About extends React.Component{
     // console.log("Parent Constructor");
   }
   componentDidMount(){
-    console.log("Component Did Mount");
+    // console.log("Component Did Mount");
   }
   render(){
       // console.log("Parent Render");
@@ -19,7 +19,7 @@ class About extends React.Component{
                <h2>This is namaste react webSeries</h2>
                {/* <User name={"Akshay Saini(function)"}/>  */}
                 <UserClass name={"Akshay Saini"} location={"Dehradun"}/>
-                <UserClass name={"Elon Musk"} location={"UK"}/>
+                {/* <UserClass name={"Elon Musk"} location={"UK"}/> */}
         </div>     
       )
     }
