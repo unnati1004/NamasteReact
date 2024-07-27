@@ -1,7 +1,8 @@
-.header{
+/* .header{
   display: flex;
   justify-content: space-between;
   border:2px solid green;
+  padding:10px;
 }
 .logo{
   width: 100px;
@@ -20,7 +21,6 @@
 }
 
 .res-card {
-  /* border: 2px solid red; */
   width: 250px;
   padding: 15px;
   margin:2px;
@@ -37,20 +37,16 @@
 }
 
 .image{
-  /* border: 5px solid blue; */
   width:250px;
   height: 190px;
 }
 
 .res-container{
-  /* border:2px solid green; */
   display: flex;
   flex-wrap: wrap;
   justify-content:"center";
   align-items:"center";
-  margin: 0;
-  /* padding: 20px; */
-  /* margin: 1px; */
+  margin: 0; 
 }
 
 .shimmer-container{
@@ -78,5 +74,4 @@
 }
 
 
-
-
+ */

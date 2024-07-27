@@ -10,7 +10,16 @@ class About extends React.Component{
   }
   componentDidMount(){
     // console.log("Component Did Mount");
+    setInterval(() => {
+      console.log("namste op");
+    }, 1000);
   }
+
+  componentWillUnmount(){
+    clearInterval();
+    // console.log("ComponentWillMount")
+  }
+
   render(){
       // console.log("Parent Render");
       return(

@@ -1,12 +1,14 @@
+import React from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 import { ResturantCard } from "./ResturantCard";
 import resList from "../utils/mockdata";
-import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router-dom";
 
 export const Body = () => {
   const [listOfResturant, setListOfResturant] = useState(resList);
-
+  const onlineStatus = useOnlineStatus();
   // useEffect(()=>{
   //   fetchData();
   // },[])
@@ -20,9 +22,17 @@ export const Body = () => {
   //   setListOfResturant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
   // }
 
-  if (listOfResturant.length == 0) {
-    <h1>Loading ..</h1>;
-  }
+  // if (onlineStatus == false) {
+  //   return (
+  //     <h3>
+  //       Looks like you're offline !! Please check your internet connection
+  //     </h3>
+  //   );
+  // }
+
+  // if (listOfResturant.length == 0) {
+  //   <h1>Loading ..</h1>;
+  // }
   return listOfResturant.length == 0 ? (
     <Shimmer />
   ) : (
