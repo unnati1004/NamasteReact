@@ -4,9 +4,15 @@ import { useParams } from "react-router";
 import { resCard } from "../utils/ResturantCardData";
 import Shimmer from "./Shimmer";
 import useResturantMenu from "../utils/useResturantMenu";
+import ResturantCategories from "./ResturantCategories";
 
 const ResturantMenuPage = () => {
   const [menuData, setMenuData] = useState(resCard[0].data.cards);
+  const [showList,setShowList] = useState(true);
+  const [showIndex,setShowIndex] = useState(null);
+
+  const categories = resCard[0].data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"] == 'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory');
+
   const params = useParams();
   const resInfo = useResturantMenu(1875);  
   //useEffect(()=>{
@@ -24,17 +30,17 @@ const ResturantMenuPage = () => {
 
   const { name, cuisines, costForTwoMessage } = menuData[2].card.card.info;
 
-  const { itemCards } = menuData[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
+  // const { itemCards } = menuData[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
  
   return menuData === null ? (
     <Shimmer />
   ) : (
-    <div>
-      <h1>{name}</h1>
-      <h2>
+    <div className="text-center" >
+      <h1 className="font-bold my-6 text-2xl">{name}</h1>
+      <h2 className="font-bold text-xl">
         {cuisines.join(",")} - {costForTwoMessage}
       </h2>
-      <h2>Menu</h2>
+      {/* <h2>Menu</h2>
       <ul>
         {itemCards.map((data) => {
           return (
@@ -43,7 +49,15 @@ const ResturantMenuPage = () => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
+
+      {/* Categories accordions */}
+        {categories.map((category,index)=>(
+          // controlled component
+          <ResturantCategories data={category.card.card} setShowIndex={()=>setShowIndex(index)} showList={index == showIndex && showList }
+          setShowList={setShowList} 
+          />
+        ))}
     </div>
   );
 };
